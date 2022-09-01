@@ -1,0 +1,27 @@
+.container {
+    width: 100%;
+}
+
+.navBar {
+    background-color: #FFB3B3;
+}
+.icon {
+    height: 90%;
+    color: red;
+}
+
+.circle {
+    background: #ffff;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.profile {
+    width: 100%;
+}
