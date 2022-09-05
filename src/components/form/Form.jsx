@@ -120,9 +120,10 @@ export const Form = () => {
         <div class="mb-3">
             <label for="formFile" class="form-label">Elegir imagen</label>
             <input onChange={(e) => handleUpload(e)} class="form-control" type="file" id="formFile"/>
-            <div class="progress">
-                <div class="progress-bar bg-success" role="progressbar" aria-label="Success example" style={{width: progress + "%"}} aria-valuenow={progress} aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress mt-3">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-label="Success example" style={{width: progress + "%"}} aria-valuenow={progress} aria-valuemin="0" aria-valuemax="100"></div>
             </div>
+                <span>{`${progress} %`}</span>
         </div>
         <div className="mt-2">
             <button onClick={() => handleSubmit()} disabled={(input.name === "" || input.message === "" || input.image === "") ? true : false} type="button" className="btn" style={{backgroundColor: "#FFB3B3", color:"#fff"}}>Enviar</button>

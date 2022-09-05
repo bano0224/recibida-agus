@@ -1,6 +1,7 @@
 .containerCards {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     padding: 50px;
     /* background-image: url('../../assets/corazones.jpg');
     background-size: cover;
