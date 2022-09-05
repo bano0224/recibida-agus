@@ -94,12 +94,8 @@ export const Form = () => {
     const handleSubmit = async() => {
         try {
             await addDoc(collection(db, `saludos`), input);
-            setInput({
-                name: "",
-                message:"",
-                date:"",
-                image:""
-            })
+            window.location.reload();
+            
           } catch (e) {
             console.error("Error al guardar el mensaje:", e);
           }
