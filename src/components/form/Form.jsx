@@ -101,23 +101,21 @@ export const Form = () => {
           }
     }
 
-        console.log(progress, "iinpuuut")
-
     return(
     <div className={style.container}>
         <div className="mb-3">
-            <label for="exampleFormControlInput1" className="form-label">Nombre</label>
+            <label htmlFor="exampleFormControlInput1" className="form-label">Nombre</label>
             <input onChange={(e) => handleChange(e)} type="text" className="form-control" name="name" id="exampleFormControlInput1" placeholder="Derek Shepherd"/>
         </div>
         <div className="mb-3">
-            <label for="exampleFormControlTextarea1" className="form-label">Mensaje</label>
+            <label htmlFor="exampleFormControlTextarea1" className="form-label">Mensaje</label>
             <textarea onChange={(e) => handleChange(e)} className="form-control" name="message" placeholder="Agustina: 'Es un hermoso día para salvar vidas'" id="exampleFormControlTextarea1" rows="3" maxLength={140}></textarea>
         </div>
-        <div class="mb-3">
-            <label for="formFile" class="form-label">Elegir imagen</label>
-            <input onChange={(e) => handleUpload(e)} class="form-control" type="file" id="formFile"/>
-            <div class="progress mt-3">
-                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-label="Success example" style={{width: progress + "%"}} aria-valuenow={progress} aria-valuemin="0" aria-valuemax="100"></div>
+        <div className="mb-3">
+            <label htmlFor="formFile" class="form-label">Elegir imagen</label>
+            <input onChange={(e) => handleUpload(e)} className="form-control" type="file" id="formFile"/>
+            <div className="progress mt-3">
+                <div className="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-label="Success example" style={{width: progress + "%"}} aria-valuenow={progress} aria-valuemin="0" aria-valuemax="100"></div>
             </div>
                 <span>{`${progress} %`}</span>
         </div>

@@ -3,6 +3,9 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 50px;
+    background-image: url('../../assets/background.jpeg') !important;
+    background-size:contain;
+    background-position:center;
     /* background-image: url('../../assets/corazones.jpg');
     background-size: cover;
     background-position: center center;

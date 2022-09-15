@@ -3,7 +3,10 @@
 }
 
 .navBar {
-    background-color: #FFB3B3;
+    /* background-color: #FFB3B3; */
+    background-image: url('../../assets/background.jpeg') !important;
+    background-size: cover;
+    background-position:center;
 }
 .icon {
     height: 90%;
