@@ -2,9 +2,9 @@ import { addDoc, collection } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import React, { useState } from "react";
 import { db, storage } from "../../firebase";
-import style from './Form.module.css'
+import style from './Form.module.css';
 
-export const Form = () => {
+export const Form = ({setIsOpen}) => {
 
     const [progress, setProgress] = useState(0)
     const [input, setInput] = useState({
@@ -94,7 +94,10 @@ export const Form = () => {
     const handleSubmit = async() => {
         try {
             await addDoc(collection(db, `saludos`), input);
-            window.location.reload();
+            setIsOpen(true);
+            setTimeout(() => {
+                window.location.reload();
+            }, 1500);
             
           } catch (e) {
             console.error("Error al guardar el mensaje:", e);
